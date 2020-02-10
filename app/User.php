@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function slike()
+    {
+        return $this->hasMany(futKartice::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
